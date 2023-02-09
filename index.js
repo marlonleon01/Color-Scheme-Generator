@@ -5,13 +5,15 @@ const getColorsBtn = document.getElementById("get-color-scheme-btn")
 const mainElement = document.getElementById("colors-holder")
 let scheme
 
+getColorsBtn.addEventListener("click", () => getColors())
 
 /* Get Random Color on start */
 const randomColor = Math.floor(Math.random() * 16777215)
 colorPicker.value = "#" + randomColor.toString(16)
+getColors()
 
 /* Display mode on select drop down and retrieving colors */
-const getColors = () => {
+function getColors() {
     fetch(`${baseUrl}?hex=${colorPicker.value.slice(1)}&${colorMode.value}`)
         .then(res => res.json())
         .then(data => {
@@ -24,9 +26,7 @@ const getColors = () => {
         })
 }
 
-getColors()
-
-const addColorSchemeMode = () => {
+function addColorSchemeMode() {
     Object.entries(scheme).forEach(([name, value]) => {
         colorMode.add(
             new Option(name.charAt(0).toUpperCase() + name.slice(1), value)
@@ -34,12 +34,8 @@ const addColorSchemeMode = () => {
     })
 }
 
-getColorsBtn.addEventListener("click", () => getColors())
-
-
 /* render colors */
-
-const renderColor = (colorsArray) => {
+function renderColor(colorsArray) {
     mainElement.innerHTML = colorsArray.map(colors => {
         return `
                 <div class="colors" style="background-color:${colors.hex.value}">
