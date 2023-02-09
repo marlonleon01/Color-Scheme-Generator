@@ -14,7 +14,7 @@ html {
 
 body {
     margin: 0;
-    padding: 0;
+    padding: 2rem;
     height: 100%;
     width: 100%;
     display: flex;
@@ -25,10 +25,10 @@ body {
 }
 
 .color-container {
-    height: 50rem;
-    width: 50rem;
-    background-color: #b81d1d;
-    border-radius: 1rem;
+    height: 45rem;
+    width: 45rem;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Everything in header */
@@ -36,13 +36,48 @@ body {
 .header {
     display: flex;
     align-items: center;
-    padding-left: 1.5rem;
+    justify-content: space-around;
+    padding: 1rem;
     height: 4.5rem;
+    width: 100%;
+    border-radius: 0.25rem 0.25rem 0 0;
     background-color: #fff;
 }
 
 .choose-color {
-    height: 3rem;
+    height: 2.8rem;
     width: 5rem;
-    border: 1px solid;
+    border: 1px solid rgba(0, 0, 0, 20%);
+}
+
+.color-scheme-mode {
+    height: 2.8rem;
+    width: 28rem;
+    border-radius: 0.3rem;
+    border: 1px solid rgba(0, 0, 0, 20%);
+}
+
+.get-color-scheme-btn {
+    height: 2.8rem;
+    width: 8rem;
+    border-radius: 0.3rem;
+    border: 1px solid rgba(0, 0, 0, 20%);
+    background-color: #FFF;
+}
+
+/* Everything in main section */
+
+.colors-holder {
+    height: 100%;
+    width: 100%;
+    background-color: red;
+}
+
+/* Everything in footer section */
+
+.colors-hexcode-holder {
+    height: 3.5rem;
+    width: 100%;
+    background-color: #FFF;
+    border-radius: 0 0 0.25rem 0.25rem;
 }
