@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+    <title>Color Scheme Generator</title>
+</head>
+<body>
+    <div class="color-container" id="color-container">
+        <header class="header">
+            <input 
+                type="color" 
+                id="choose-color" 
+                class="choose-color"
+                value="#ff0000"
+            >
+            <select 
+                id="color-scheme-mode" 
+                class="color-scheme-mode">
+            </select>   
+            <button 
+                class="get-color-scheme-btn" 
+                id="get-color-scheme-btn">
+            </button>
+        </header>
+        <main 
+            class="colors-holder" 
+            id="colors-holder">
+        </main>
+        <footer 
+            class="colors-hexcode-holder" 
+            id="colors-hexcode-holder">
+        </footer>
+        <!-- <div id="snackbar">Color copied to clipboard</div> -->
+    </div>
+</body>
+</html>
