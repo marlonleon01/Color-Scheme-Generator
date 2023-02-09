@@ -79,7 +79,6 @@ body {
 .colors {
     flex: 1;
     display: flex;
-    cursor: pointer;
     position: relative;
     overflow: hidden;
 }
@@ -89,7 +88,6 @@ body {
     height: 3.2rem;
     background-color: #fff;
     flex: 1;
-    cursor: pointer;
     margin-bottom: 0;
     display: flex;
     justify-content: center;
