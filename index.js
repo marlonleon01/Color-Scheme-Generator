@@ -27,15 +27,16 @@ getColors()
 //     )
 // }
 
-// getColorsBtn.addEventListener("click", () => getColors())
+getColorsBtn.addEventListener("click", () => getColors())
 
 
 /* render colors */
 
 const renderColor = (colorsArray) => {
-    mainElement.innerHTML += colorsArray.map(colors => {
+    mainElement.innerHTML = colorsArray.map(colors => {
         return `
                 <div class="colors" style="background-color:${colors.hex.value}">
+                    <p class="colors-hexcode-holder">${colors.hex.value}</p>
                 </div>
             `
     }).join("")
