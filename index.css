@@ -90,6 +90,7 @@ body {
     background-color: #fff;
     flex: 1;
     cursor: pointer;
+    margin-bottom: 0;
 }
 
 
