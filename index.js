@@ -12,20 +12,27 @@ colorPicker.value = "#" + randomColor.toString(16)
 
 /* Display mode on select drop down and retrieving colors */
 const getColors = () => {
-    fetch(`${baseUrl}?hex=${colorPicker.value.slice(1)}&mode=${colorMode.value}`)
+    fetch(`${baseUrl}?hex=${colorPicker.value.slice(1)}&${colorMode.value}`)
         .then(res => res.json())
         .then(data => {
-            console.log(data.colors)
             renderColor(data.colors)
+
+            if (!scheme) {
+                scheme = data._links.schemes
+                addColorSchemeMode()
+            }
         })
 }
 
 getColors()
-// const addColorSchemeMode = () => {
-//     Object.entries(scheme).forEach(
 
-//     )
-// }
+const addColorSchemeMode = () => {
+    Object.entries(scheme).forEach(([name, value]) => {
+        colorMode.add(
+            new Option(name.charAt(0).toUpperCase() + name.slice(1), value)
+        ) 
+    })
+}
 
 getColorsBtn.addEventListener("click", () => getColors())
 
