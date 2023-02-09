@@ -91,6 +91,9 @@ body {
     flex: 1;
     cursor: pointer;
     margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
