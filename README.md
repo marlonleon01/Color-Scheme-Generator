@@ -1,9 +1,9 @@
 # Color-Scheme-Generator
 
 ## Description
--I created this to work with an API that generates colors 
--It help me learn how to further use the get request to allow the user to change what color they want and have the API return the new values   
--It was the first solo project of the Working with APIs scrimba course
+-I created this to work with an API that generates colors   
+-It help me learn how to further use the get request to allow the user to change what color they want and have the API return the new values    
+-It was the first solo project of the Working with APIs scrimba course   
 
 ## Required
 -Code editor (Visual Studio Code recommended)  
